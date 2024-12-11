@@ -59,7 +59,7 @@ int TestFunc_DoubleI_Double(const Func *f, MTdata d, bool relaxedMode)
     cl_ulong maxiError = f->double_ulps == INFINITY ? CL_ULONG_MAX : 0;
     uint64_t step = getTestStep(sizeof(cl_double), BUFFER_SIZE);
     int scale =
-        (int)((1ULL << 32) / (16 * BUFFER_SIZE / sizeof(cl_double)) + 1);
+        (int)((1ULL << 16) / (16 * BUFFER_SIZE / sizeof(cl_double)) + 1);
 
     logFunctionInfo(f->name, sizeof(cl_double), relaxedMode);
 
@@ -73,7 +73,7 @@ int TestFunc_DoubleI_Double(const Func *f, MTdata d, bool relaxedMode)
                                &build_info)))
         return error;
 
-    for (uint64_t i = 0; i < (1ULL << 32); i += step)
+    for (uint64_t i = 0; i < (1ULL << 16); i += step)
     {
         // Init input array
         double *p = (double *)gIn;

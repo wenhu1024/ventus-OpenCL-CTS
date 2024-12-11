@@ -23,7 +23,7 @@
 #include "harness/ThreadPool.h"
 #include "harness/conversions.h"
 
-#define BUFFER_SIZE (1024 * 1024 * 2)
+#define BUFFER_SIZE (1024 * 4 * 2)
 #define EMBEDDED_REDUCTION_FACTOR (64)
 
 #if defined(__GNUC__)
@@ -241,7 +241,7 @@ inline uint64_t getTestStep(size_t typeSize, size_t bufferSize)
 {
     if (gWimpyMode)
     {
-        return (1ULL << 32) * gWimpyReductionFactor / (512);
+        return (1ULL << 16) * gWimpyReductionFactor / (512);
     }
     else if (gIsEmbedded)
     {

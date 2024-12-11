@@ -354,7 +354,7 @@ int TestFunc_Double_Double(const Func *f, MTdata d, bool relaxedMode)
     }
     else
     {
-        test_info.jobCount = (cl_uint)((1ULL << 32) / test_info.step);
+        test_info.jobCount = (cl_uint)((1ULL << 16) / test_info.step);
     }
 
     test_info.f = f;

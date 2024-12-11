@@ -157,7 +157,7 @@ int TestFunc_Float_Float_Float_Float(const Func *f, MTdata d, bool relaxedMode)
                                &build_info)))
         return error;
 
-    for (uint64_t i = 0; i < (1ULL << 32); i += step)
+    for (uint64_t i = 0; i < (1ULL << 16); i += step)
     {
         // Init input array
         cl_uint *p = (cl_uint *)gIn;

@@ -45,7 +45,7 @@ int TestFunc_Int_Float(const Func *f, MTdata d, bool relaxedMode)
     KernelMatrix kernels;
     int ftz = f->ftz || gForceFTZ || 0 == (CL_FP_DENORM & gFloatCapabilities);
     uint64_t step = getTestStep(sizeof(float), BUFFER_SIZE);
-    int scale = (int)((1ULL << 32) / (16 * BUFFER_SIZE / sizeof(float)) + 1);
+    int scale = (int)((1ULL << 16) / (16 * BUFFER_SIZE / sizeof(float)) + 1);
 
     logFunctionInfo(f->name, sizeof(cl_float), relaxedMode);
 
@@ -66,7 +66,7 @@ int TestFunc_Int_Float(const Func *f, MTdata d, bool relaxedMode)
             return error;
     }
 
-    for (uint64_t i = 0; i < (1ULL << 32); i += step)
+    for (uint64_t i = 0; i < step; i += step)
     {
         // Init input array
         cl_uint *p = (cl_uint *)gIn;

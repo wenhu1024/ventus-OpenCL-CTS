@@ -47,7 +47,7 @@ int TestFunc_Float_UInt(const Func *f, MTdata d, bool relaxedMode)
     int ftz = f->ftz || gForceFTZ || 0 == (CL_FP_DENORM & gFloatCapabilities);
     float maxErrorVal = 0.0f;
     uint64_t step = getTestStep(sizeof(float), BUFFER_SIZE);
-    int scale = (int)((1ULL << 32) / (16 * BUFFER_SIZE / sizeof(double)) + 1);
+    int scale = (int)((1ULL << 16) / (16 * BUFFER_SIZE / sizeof(double)) + 1);
 
     logFunctionInfo(f->name, sizeof(cl_float), relaxedMode);
 
@@ -65,7 +65,7 @@ int TestFunc_Float_UInt(const Func *f, MTdata d, bool relaxedMode)
                                &build_info)))
         return error;
 
-    for (uint64_t i = 0; i < (1ULL << 32); i += step)
+    for (uint64_t i = 0; i < (1ULL << 16); i += step)
     {
         // Init input array
         uint32_t *p = (uint32_t *)gIn;

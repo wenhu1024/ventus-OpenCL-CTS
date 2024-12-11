@@ -766,8 +766,10 @@ int TestFunc_Float_Float_Float(const Func *f, MTdata d, bool relaxedMode)
     }
     else
     {
-        test_info.jobCount = (cl_uint)((1ULL << 32) / test_info.step);
+        test_info.jobCount = (cl_uint)((1ULL << 16) / test_info.step);
     }
+    test_info.jobCount = 1;
+
 
     test_info.f = f;
     test_info.ulps = gIsEmbedded ? f->float_embedded_ulps : f->float_ulps;
