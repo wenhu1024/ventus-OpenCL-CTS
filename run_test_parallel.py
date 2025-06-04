@@ -12,7 +12,7 @@ import argparse
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-def run_test(folder, exec_file, subtest,
+def run_test(folder, exec_file, need_single_thread, subtest,
              build_root, logs_dir, install_queue):
     """
     在指定的子目录（若有 subtest 则是 build_root/folder/subtest，否则是 build_root/folder）里
@@ -27,13 +27,14 @@ def run_test(folder, exec_file, subtest,
     log_path  = os.path.join(logs_dir, f"output_{test_name}.log")
 
     # 1) 准备工作目录与命令
+    exe_name, *exe_args = exec_file
     if subtest:
         work_dir = os.path.join(build_root, folder, subtest)
         os.makedirs(work_dir, exist_ok=True)
-        cmd = [f"../{exec_file}", subtest]
+        cmd = [f"../{exe_name}", *exe_args, subtest]
     else:
         work_dir = os.path.join(build_root, folder)
-        cmd = [f"./{exec_file}"]
+        cmd = [f"./{exe_name}", *exe_args]
 
     if not os.path.isdir(work_dir):
         raise FileNotFoundError(f"找不到工作目录: {work_dir!r}")
@@ -51,7 +52,8 @@ def run_test(folder, exec_file, subtest,
         env["OCL_ICD_VENDORS"]       = os.path.join(lib_dir, "libpocl.so")
         env["CL_ICD_FILENAMES"]      = os.path.join(lib_dir, "libpocl.so")
         env["POCL_DEVICES"]          = "ventus"
-        env["CL_TEST_SINGLE_THREADED"] = "1"
+        if need_single_thread:
+            env["CL_TEST_SINGLE_THREADED"] = "1"
 
         # 4) 写 header 并执行
         header = (
@@ -170,22 +172,31 @@ def main():
         tests = json.load(f)
 
     # 2. 可执行文件映射（如有特殊命名）
+    # 最后的 True 表示采用单线程
     exec_map = {
-        "math_brute_force": "test_bruteforce",
-        "multiple_device_context": "test_multiples",
+        "math_brute_force":        (["test_bruteforce"],          True),
+        "integer_ops":             (["test_integer_ops"],         True),
+        "multiple_device_context": (["test_multiples"],           False),
+        "select":                  (["test_select", "-w"],        False),
+        "conversions":             (["test_conversions", "-wz2"], False),
     }
 
     # 3. 构造任务列表
     tasks = []
     for folder, info in tests.items():
-        exe      = exec_map.get(folder, f"test_{folder}")
+        # 如果在 exec_map 中，就取对应的 (cmd_list, need_single)
+        # 否则默认可执行名为 test_<folder>，并且不需要单线程
+        cmd_list, need_single = exec_map.get(
+            folder,
+            ([f"test_{folder}"], False)
+        )
         if not info:
-            tasks.append((folder, exe, None))
+            tasks.append((folder, cmd_list, need_single, None))
         else:
             for sub, meta in info.items():
                 state = meta.get("state")
                 if "all" in args.filter_state or state in args.filter_state:
-                    tasks.append((folder, exe, sub))
+                    tasks.append((folder, cmd_list, need_single, sub))
 
     total = len(tasks)
     print(f"准备执行 {total} 个测试任务，最大并发数 = {args.max_workers}\n")
@@ -213,11 +224,11 @@ def main():
         future_to_task = {
             pool.submit(
                 run_test,
-                folder, exe, sub,
+                folder, cmd_list, need_single, sub,
                 build_root, logs_dir,
                 install_queue
             ): (folder, sub)
-            for folder, exe, sub in tasks
+            for folder, cmd_list, need_single, sub in tasks
         }
         for future in as_completed(future_to_task):
             folder, sub = future_to_task[future]
