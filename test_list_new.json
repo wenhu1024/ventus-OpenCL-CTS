@@ -1851,7 +1851,7 @@
             "comment": ""
         },
         "geom_length": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "geom_fast_length": {
@@ -1859,7 +1859,7 @@
             "comment": ""
         },
         "geom_normalize": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "geom_fast_normalize": {
