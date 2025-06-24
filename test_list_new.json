@@ -6343,67 +6343,67 @@
     },
     "contractions": {
         "contractions_float_0": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_1": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_2": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_3": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_4": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_5": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_6": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_float_7": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_0": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_1": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_2": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_3": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_4": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_5": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_6": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "contractions_double_7": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         }
     },
