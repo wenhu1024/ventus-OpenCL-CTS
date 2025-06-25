@@ -7171,7 +7171,7 @@
             "comment": ""
         },
         "nextafter": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "pow": {
