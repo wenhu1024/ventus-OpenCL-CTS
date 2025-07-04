@@ -2369,7 +2369,7 @@
             "comment": ""
         },
         "uchar_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_ulong": {
@@ -2409,7 +2409,7 @@
             "comment": ""
         },
         "uchar_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_rte_ulong": {
@@ -2449,7 +2449,7 @@
             "comment": ""
         },
         "uchar_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_rtp_ulong": {
@@ -2489,7 +2489,7 @@
             "comment": ""
         },
         "uchar_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_rtn_ulong": {
@@ -2529,7 +2529,7 @@
             "comment": ""
         },
         "uchar_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_rtz_ulong": {
@@ -2569,7 +2569,7 @@
             "comment": ""
         },
         "uchar_sat_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_sat_ulong": {
@@ -2609,7 +2609,7 @@
             "comment": ""
         },
         "uchar_sat_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_sat_rte_ulong": {
@@ -2649,7 +2649,7 @@
             "comment": ""
         },
         "uchar_sat_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_sat_rtp_ulong": {
@@ -2689,7 +2689,7 @@
             "comment": ""
         },
         "uchar_sat_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_sat_rtn_ulong": {
@@ -2729,7 +2729,7 @@
             "comment": ""
         },
         "uchar_sat_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uchar_sat_rtz_ulong": {
@@ -3169,7 +3169,7 @@
             "comment": ""
         },
         "ushort_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_ulong": {
@@ -3209,7 +3209,7 @@
             "comment": ""
         },
         "ushort_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_rte_ulong": {
@@ -3249,7 +3249,7 @@
             "comment": ""
         },
         "ushort_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_rtp_ulong": {
@@ -3289,7 +3289,7 @@
             "comment": ""
         },
         "ushort_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_rtn_ulong": {
@@ -3329,7 +3329,7 @@
             "comment": ""
         },
         "ushort_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_rtz_ulong": {
@@ -3369,7 +3369,7 @@
             "comment": ""
         },
         "ushort_sat_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_sat_ulong": {
@@ -3409,7 +3409,7 @@
             "comment": ""
         },
         "ushort_sat_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_sat_rte_ulong": {
@@ -3449,7 +3449,7 @@
             "comment": ""
         },
         "ushort_sat_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_sat_rtp_ulong": {
@@ -3489,7 +3489,7 @@
             "comment": ""
         },
         "ushort_sat_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_sat_rtn_ulong": {
@@ -3529,7 +3529,7 @@
             "comment": ""
         },
         "ushort_sat_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "ushort_sat_rtz_ulong": {
@@ -3969,7 +3969,7 @@
             "comment": ""
         },
         "uint_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_ulong": {
@@ -4009,7 +4009,7 @@
             "comment": ""
         },
         "uint_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_rte_ulong": {
@@ -4049,7 +4049,7 @@
             "comment": ""
         },
         "uint_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_rtp_ulong": {
@@ -4089,7 +4089,7 @@
             "comment": ""
         },
         "uint_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_rtn_ulong": {
@@ -4129,7 +4129,7 @@
             "comment": ""
         },
         "uint_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_rtz_ulong": {
@@ -4169,7 +4169,7 @@
             "comment": ""
         },
         "uint_sat_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_sat_ulong": {
@@ -4209,7 +4209,7 @@
             "comment": ""
         },
         "uint_sat_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_sat_rte_ulong": {
@@ -4249,7 +4249,7 @@
             "comment": ""
         },
         "uint_sat_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_sat_rtp_ulong": {
@@ -4289,7 +4289,7 @@
             "comment": ""
         },
         "uint_sat_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_sat_rtn_ulong": {
@@ -4329,7 +4329,7 @@
             "comment": ""
         },
         "uint_sat_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "uint_sat_rtz_ulong": {
@@ -4849,7 +4849,7 @@
             "comment": ""
         },
         "float_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_rtp_ulong": {
@@ -4889,7 +4889,7 @@
             "comment": ""
         },
         "float_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_rtn_ulong": {
@@ -4929,7 +4929,7 @@
             "comment": ""
         },
         "float_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_rtz_ulong": {
@@ -4969,7 +4969,7 @@
             "comment": ""
         },
         "float_sat_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_sat_ulong": {
@@ -5009,7 +5009,7 @@
             "comment": ""
         },
         "float_sat_rte_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_sat_rte_ulong": {
@@ -5049,7 +5049,7 @@
             "comment": ""
         },
         "float_sat_rtp_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_sat_rtp_ulong": {
@@ -5089,7 +5089,7 @@
             "comment": ""
         },
         "float_sat_rtn_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_sat_rtn_ulong": {
@@ -5129,7 +5129,7 @@
             "comment": ""
         },
         "float_sat_rtz_double": {
-            "state": "fail",
+            "state": "pass",
             "comment": ""
         },
         "float_sat_rtz_ulong": {
